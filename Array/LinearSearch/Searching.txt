@@ -1,0 +1,13 @@
+what is Linear Search?
+Linear search, also known as sequential search, is a method for finding an element in a list or an array.
+It involves iterating through the list or array one element at a time, starting from the first element,
+and comparing each element to the target element until a match is found.
+
+int[] arr = {2 ,13 , 50 , 45 , 60 ,33 ,12};
+Question:- Find weather the number 50 exists in array or not.
+if yes, return index
+if No, return -1
+
+
+
+
