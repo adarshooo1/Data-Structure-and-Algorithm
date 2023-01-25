@@ -2,23 +2,30 @@
 package Array.BinarySearch.Part_2;
 
 import javax.swing.plaf.basic.BasicArrowButton;
+import java.time.Period;
 import java.util.Random;
 
 public class LeetcodeQuestion8 {
     public static void main(String[] args) {
         int[] arr = {11, 12, 13, 15, 0, 1, 2, 3, 4, 5, 6};
-        int check = RotatedArray(arr, 15);
+        int check = RotatedArray(arr, 9);
         System.out.println(check);
 
     }
 
     static int RotatedArray(int[] arr, int target) {
-        int Peak = findPivot(arr);
-        int ans = BinarySearch(arr, target, 0, Peak);
-        if (ans == -1) {
-            ans = BinarySearch(arr, target, Peak + 1, arr.length - 1);
+        int Pivot = findPivot(arr);
+        if (Pivot == -1) {
+            BinarySearch(arr, target, 0, arr.length - 1);
         }
-        return ans;
+        if (arr[Pivot] == target) {
+            return Pivot;
+        }
+        if (target >= arr[0]) {
+            return BinarySearch(arr, target, 0, Pivot);
+        }else{
+            return BinarySearch(arr, target, Pivot + 1, arr.length - 1);
+        }
     }
 
     static int BinarySearch(int[] arr, int target, int start, int end) {
