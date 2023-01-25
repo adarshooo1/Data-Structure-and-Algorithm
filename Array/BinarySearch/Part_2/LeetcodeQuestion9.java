@@ -1,11 +1,9 @@
-//Leetcode Question 33.Search in Rotated Sorted array
 package Array.BinarySearch.Part_2;
 
-
-public class LeetcodeQuestion8 {
+public class LeetcodeQuestion9 {
     public static void main(String[] args) {
-        int[] arr = {11, 12, 13, 15, 0, 1, 2, 3, 4, 5, 6};
-        int check = RotatedArray(arr, 9);
+        int[] arr = {2, 2, 2, 15, 2, 2, 5, 7};
+        int check = RotatedArray(arr, 5);
         System.out.println(check);
 
     }
@@ -49,12 +47,29 @@ public class LeetcodeQuestion8 {
             if (mid > start && arr[mid] < arr[mid - 1]) {
                 return mid - 1;
             }
-            if (arr[mid] <= arr[start]) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
-            }
+            if (arr[mid] == arr[start] && arr[mid] == arr[end]) {
+                //This will skip the duplicate value.
 
+                //Might be start and end is pivot so also check.
+
+                //Check whether start is pivot
+                if (arr[start] > arr[start + 1]) {
+                    return start;
+                }
+               start++;
+
+                //Check whether end is pivot
+                if (arr[end] < arr[end - 1]) {
+                    return end - 1;
+                }
+                end--;
+            }
+            //Left side is sorted, so pivot should be in right.
+            else if (arr[start] < arr[mid] || arr[start] == arr[mid] && arr[mid] > arr[mid]) {
+                start = mid + 1;
+            }else {
+                end = mid - 1;
+            }
         }
         return -1;
     }
