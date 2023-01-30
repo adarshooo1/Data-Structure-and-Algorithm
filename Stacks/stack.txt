@@ -1,0 +1,14 @@
+A Stacks is a class.
+
+A Stacks is a linear data structure in Java that follows the Last-In-First-Out (LIFO) principle,
+meaning the last element pushed onto the stack will be the first one to be popped off.
+It has operations such as push, pop, and peek. It can be implemented using an Array or Linked List.
+
+Removal is knows as pop
+Insertion is known as push
+
+Example of a Stacks:-In a sack what we put first or add first, get removed in last.
+or, a can of Rice what we put first take it out at very last.
+
+This is also known as abstract datatype we just using it from outside don't know its internal implementation.
+
