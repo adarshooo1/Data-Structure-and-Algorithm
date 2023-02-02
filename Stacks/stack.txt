@@ -12,3 +12,5 @@ or, a can of Rice what we put first take it out at very last.
 
 This is also known as abstract datatype we just using it from outside don't know its internal implementation.
 
+The element that is most recently added to a stack is considered to be at the top.
+
