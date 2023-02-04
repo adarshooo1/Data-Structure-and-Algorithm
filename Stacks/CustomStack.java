@@ -1,5 +1,7 @@
 package Stacks;
 
+import java.util.Arrays;
+
 public class CustomStack {
 
 //  Internally Stack is a type of Array, that's why we are providing an Array as a Datatype.
@@ -50,20 +52,22 @@ public class CustomStack {
         }
         return data[ptr];
     }
-//  This will return true if the stack is full else false.
-    private boolean isFull() {
+    //  This will return true if the stack is full else false.
+    public boolean isFull() {
         return ptr == data.length - 1;
     }
 //  This will return false if the stack has some item in it, else false.
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return ptr == -1;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CustomException {
 //      Using CustomStack its properties
         CustomStack stack = new CustomStack();
         stack.push(12);
         stack.push(39);
+        stack.push(122);
+        System.out.println(stack.pop());
         System.out.println(stack.isEmpty());
     }
 }
