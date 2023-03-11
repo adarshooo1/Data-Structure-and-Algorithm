@@ -1,9 +1,22 @@
+//https://leetcode.com/problems/find-the-duplicate-number/
 package Array.Sorting.CyclicSort;
 
-import java.util.ArrayList;
-import java.util.List;
+/*  Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
 
-public class CyclicSorting3 {
+        There is only one repeated number in nums, return this repeated number.
+
+        You must solve the problem without modifying the array nums and uses only constant extra space.
+
+        Example 1:
+
+        Input: nums = [1,3,4,2,2]
+        Output: 2
+        Example 2:
+
+        Input: nums = [3,1,3,4,2]
+        Output: 3       */
+
+public class LeetcodeQuestion3 {
     public static void main(String[] args) {
         int[] arr = {2, 4, 2, 1, 5, 9, 8};
         int answer = findDuplicate(arr);
@@ -11,19 +24,19 @@ public class CyclicSorting3 {
 
     }
 
-    static int findDuplicate(int[] arr) {
+    static int findDuplicate(int[] nums) {
         int i = 0;
-        while (i < arr.length) {
-            if (arr[i] != i+1) {
+        while (i < nums.length) {
+            if (nums[i] != i+1) {
                 // Calculate the correct index for the current element
-                int correct = arr[i] - 1;
+                int correct = nums[i] - 1;
 
                 // If the current element is not in its correct position, swap it
-                if (arr[i] != arr[correct]) {
-                    swap(arr, i, correct);
+                if (nums[i] != nums[correct]) {
+                    swap(nums, i, correct);
                 }
                 else{
-                    return arr[i];
+                    return nums[i];
                 }
                 // If the current element is already in its correct position, move to the next element
             }else {
