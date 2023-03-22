@@ -1,0 +1,16 @@
+What is Recursion?
+
+Recursion is a programming technique in which a function calls itself repeatedly until a certain condition is met.
+This technique is used in many algorithms and data structures to solve problems that can be broken down into smaller,
+simpler versions of themselves.
+
+
+Prerequisites?
+
+Functions and Memory Management(Heap Memory and Stack Memory).
+
+Why do we use Recursion:
+1.To solve the bigger /complex problem in a simple way like breaking down them.
+2.We can convert recursion solution into iteration & Vice-Versa.
+3.Space Complexity in not constant because of recursive calls.
+
