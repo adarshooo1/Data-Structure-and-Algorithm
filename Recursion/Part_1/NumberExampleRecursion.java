@@ -4,6 +4,7 @@ public class NumberExampleRecursion {
     public static void main(String[] args) {
         Print(1);
     }
+//Write a recursive program which print first 5 number : 1, 2, 3, 4, 5. If n is given an input 1.
     static void Print(int n) {
         System.out.println(n);
 
