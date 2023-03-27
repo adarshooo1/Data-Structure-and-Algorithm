@@ -2,7 +2,7 @@ package Recursion.Part_2;
 
 public class DigitProduct {
     public static void main(String[] args) {
-        System.out.println(product(55));
+        System.out.println(product(505));
 
     }
 
