@@ -1,12 +1,16 @@
 package Recursion.Part_3;
 
+import java.util.ArrayList;
+
 public class LinearSearch {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5, 6};
+        int[] arr = {1, 2, 3, 4, 5, 6, 4, 12, 2, 12};
         System.out.println(findIndex(arr, 4, 0));//This will search from the index 0 but return the index
         System.out.println(findIndexLast(arr, 6, arr.length - 1));//This will search from the last index but return the index.
         System.out.println(find(arr, 4, 0));////This will search from the index 0 but return the boolean.
-
+        //find the multiple target values and return in form of list
+        findAllIndex(arr, 12, 0);
+        System.out.println(list);
     }
     //Return Index
     static int findIndex(int[] arr, int target, int index) {
@@ -44,6 +48,18 @@ public class LinearSearch {
         // that's why it goes further and in the or(||) operator both condition is checked and one condition must be true
         // if not then again search.
         return arr[index] == target || find(arr, target, index + 1);
+    }
+
+    //Find all target element index if the occurrence is multiple times and add it into the list.
+    static ArrayList<Integer> list = new ArrayList<>();
+    static void findAllIndex(int[] arr , int target, int index) {
+        if (index == arr.length) {
+            return;
+        }
+        if (arr[index] == target) {
+            list.add(index);
+        }
+        findAllIndex(arr, target, index + 1);
     }
 }
 
