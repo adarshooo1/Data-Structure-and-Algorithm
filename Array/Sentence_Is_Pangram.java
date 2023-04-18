@@ -1,9 +1,5 @@
 package Array;
 
-import java.util.AbstractList;
-import java.util.Arrays;
-import java.util.Locale;
-
 public class Sentence_Is_Pangram {
     public static void main(String[] args) {
         String sentence = "qwertyuioplkjhgfdsazxcvbnm";
