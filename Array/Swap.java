@@ -1,11 +1,10 @@
 package Array;
-
 import java.util.Arrays;
 
 public class Swap {
     public static void main(String[] args) {
         int[] arr = {9, 12, 15, 190, 2, 11};
-//      Swapping in the an Array
+//      Swapping in the Array
         swap(arr, 2, 5);
         System.out.println(Arrays.toString(arr));
     }
